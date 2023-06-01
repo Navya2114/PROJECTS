@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Update Product</title>
+  <style>
+    /* Add your desired CSS styles here */
+  </style>
+  <script>
+    // Add your desired JavaScript code here
+  </script>
+</head>
+<body>
+  <h1>Update Product</h1>
+  <form id="update-product-form" method="POST" action="/update-product">
+    <label for="productid">Product ID:</label>
+    <input type="text" id="productid" name="productid" required><br>
+
+    <label for="change">Change:</label>
+    <select id="change" name="change">
+      <option value="product_name">Product Name</option>
+      <option value="product_stock">Product Stock</option>
+      <option value="product_price">Product Price</option>
+    </select><br>
+
+    <label for="newvalue">New Value:</label>
+    <input type="text" id="newvalue" name="newvalue" required><br>
+
+    <button type="submit">Update</button>
+  </form>
+</body>
+</html>

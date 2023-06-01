@@ -1,0 +1,32 @@
+<div class="section">
+    <h2>Supplier Section</h2>
+    <div class="options">
+        <a href="#">Add</a>
+        <a href="#">Update</a>
+        <a href="#">Delete</a>
+        <a href="/show-supplier">Show</a>
+    </div>
+</div>
+
+<div class="table-container">
+    <table>
+        <thead>
+            <tr>
+                <th>Supplier ID</th>
+                <th>Supplier Name</th>
+                <th>Supplier Address</th>
+                <th>Supplier Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for supplier in data %}
+            <tr>
+                <td>{{ supplier.supplier_id }}</td>
+                <td>{{ supplier.supplier_name }}</td>
+                <td>{{ supplier.supplier_address }}</td>
+                <td>{{ supplier.supplier_email }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>

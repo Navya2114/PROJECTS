@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flask Web App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: black;
+            color: white;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.8);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1s;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .section {
+            margin-bottom: 20px;
+        }
+        
+        .section h2 {
+            margin-bottom: 10px;
+        }
+        
+        .options {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .options a {
+            display: block;
+            width: 100px;
+            padding: 10px;
+            margin: 10px;
+            color: #333;
+            text-decoration: none;
+            background-color: #f5f5f5;
+            border-radius: 5px;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+        
+        .options a:hover {
+            transform: scale(1.05);
+            background-color: #e0e0e0;
+        }
+        
+        .table-container {
+            overflow-x: auto;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        th, td {
+            padding: 10px;
+            border-bottom: 1px solid white;
+        }
+        
+        th {
+            background-color: #333;
+        }
+        
+        tr:nth-child(even) {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Flask Web App</h1>
+        
+        <div class="section">
+            <h2>Customer Section</h2>
+            <div class="options">
+                <a href="#">Add</a>
+                <a href="#">Update</a>
+                <a href="#">Delete</a>
+                <a href="/show-customers">Show</a>
+            </div>
+        </div>
+        
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Customer ID</th>
+                        <th>Customer Name</th>
+                        <th>Customer Address</th>
+                        <th>Customer Email</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for customer in data %}
+                    <tr>
+                        <td>{{ customer.customer_id }}</td>
+                        <td>{{ customer.customer_name }}</td>
+                        <td>{{ customer.customer_address }}</td>
+                        <td>{{ customer.customer_email }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
