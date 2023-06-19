@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Delete Customer</title>
+  <style>
+    /* CSS to style the body element with a beautiful black background */
+    body {
+      background-color: #000000;
+    }
+
+    /* Additional styles for the form */
+    h1 {
+      color: #ffffff;
+      text-align: center;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 50px;
+      color: #ffffff;
+    }
+
+    label {
+      margin-top: 10px;
+    }
+
+    input[type="text"],
+    select {
+      width: 200px;
+      padding: 5px;
+      border-radius: 5px;
+    }
+
+    button[type="submit"] {
+      padding: 10px 20px;
+      margin-top: 20px;
+      background-color: #ffffff;
+      color: #000000;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button[type="submit"]:hover {
+      background-color: #cccccc;
+    }
+  </style>
+  <script>
+    // Add your desired JavaScript code here
+  </script>
+</head>
+<body>
+  <h1>Delete Customer</h1>
+  <form id="delete-customer-form" method="POST" action="/delete-customer">
+    <label for="customer_id">Customer ID:</label>
+    <input type="text" id="customer_id" name="customer_id" required><br>
+
+    <label for="delete_option">Delete Option:</label>
+    <select id="delete_option" name="delete_option">
+      <option value="customer_name">Customer Name</option>
+      <option value="customer_address">Customer Address</option>
+      <option value="customer_email">Customer Email</option>
+    </select><br>
+
+    <button type="submit">Delete</button>
+  </form>
+</body>
+</html>

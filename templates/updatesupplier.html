@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Update Supplier</title>
+  <style>
+    /* CSS to style the body element with a beautiful black background */
+    body {
+      background-color: #000000;
+    }
+
+    /* Additional styles for the form */
+    h1 {
+      color: #ffffff;
+      text-align: center;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 50px;
+      color: #ffffff;
+    }
+
+    label {
+      margin-top: 10px;
+    }
+
+    input[type="text"],
+    select {
+      width: 200px;
+      padding: 5px;
+      border-radius: 5px;
+    }
+
+    button[type="submit"] {
+      padding: 10px 20px;
+      margin-top: 20px;
+      background-color: #ffffff;
+      color: #000000;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button[type="submit"]:hover {
+      background-color: #cccccc;
+    }
+  </style>
+  <script>
+    // Add your desired JavaScript code here
+  </script>
+</head>
+<body>
+  <h1>Update Supplier</h1>
+  <form id="update-supplier-form" method="POST" action="/update-supplier">
+    <label for="supplierid">Supplier ID:</label>
+    <input type="text" id="supplierid" name="supplierid" required><br>
+
+    <label for="change">Change:</label>
+    <select id="change" name="change">
+      <option value="supplier_name">Supplier Name</option>
+      <option value="supplier_address">Supplier Address</option>
+      <option value="supplier_contact">Supplier Contact</option>
+    </select><br>
+
+    <label for="newvalue">New Value:</label>
+    <input type="text" id="newvalue" name="newvalue" required><br>
+
+    <button type="submit">Update</button>
+  </form>
+</body>
+</html>

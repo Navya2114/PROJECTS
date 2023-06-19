@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Update Orders</title>
+  <style>
+    /* CSS to style the body element with a beautiful black background */
+    body {
+      background-color: #000000;
+    }
+
+    /* Additional styles for the form */
+    h1 {
+      color: #ffffff;
+      text-align: center;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 50px;
+      color: #ffffff;
+    }
+
+    label {
+      margin-top: 10px;
+    }
+
+    input[type="text"],
+    select {
+      width: 200px;
+      padding: 5px;
+      border-radius: 5px;
+    }
+
+    button[type="submit"] {
+      padding: 10px 20px;
+      margin-top: 20px;
+      background-color: #ffffff;
+      color: #000000;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button[type="submit"]:hover {
+      background-color: #cccccc;
+    }
+  </style>
+  <script>
+    // Add your desired JavaScript code here
+  </script>
+</head>
+<body>
+  <h1>Update Orders</h1>
+  <form id="update-orders-form" method="POST" action="/update-orders">
+    <label for="orderid">Order ID:</label>
+    <input type="text" id="orderid" name="orderid" required><br>
+
+    <label for="change">Change:</label>
+    <select id="change" name="change">
+      <option value="product_id">Product ID</option>
+      <option value="customer_id">Customer ID</option>
+      <option value="quantity">Quantity</option>
+    </select><br>
+
+    <label for="newvalue">New Value:</label>
+    <input type="text" id="newvalue" name="newvalue" required><br>
+
+    <button type="submit">Update</button>
+  </form>
+</body>
+</html>
